@@ -1,0 +1,20 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend/user-app && npm start",
+    "backend": "cd backend && nodemon server.js",
+    "build:frontend": "cd frontend/user-app && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0"
+  }
+}
