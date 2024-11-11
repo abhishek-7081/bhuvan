@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "cd frontend/user-app && npm start",
+    "frontend": "cd user-app && npm start",
     "backend": "cd backend && nodemon server.js",
-    "build:frontend": "cd frontend/user-app && npm run build"
+    "build:frontend": "cd user-app && npm run build"
   },
   "keywords": [],
   "author": "",
