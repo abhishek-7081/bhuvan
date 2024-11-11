@@ -3,20 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "start": "node backend/server.js",  
-  "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
-  "frontend": "cd user-app && npm start",
-  "backend": "cd backend && nodemon server.js",
-  "build:frontend": "cd user-app && npm run build",
-  "postinstall": "npm run build:frontend"
- },
-
+  "scripts": {
+    "start": "node backend/server.js",  
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd user-app && npm start",
+    "backend": "cd backend && nodemon server.js",
+    "build:frontend": "cd user-app && npm run build",
+    "postinstall": "npm run build:frontend"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "concurrently": "^9.0.1",
+    "express": "^4.17.1" 
+  },
+  "devDependencies": {
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0"
   }
