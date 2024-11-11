@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 const authRoutes= require('./routes/auth.js')
-
+const path = require('path');
 
 
 const Color = require('./models/color.js'); // Assuming you have a Color model
@@ -155,10 +155,12 @@ dotenv.config();
 
 //mongodb connection
 connectDB();
-app.use(express.static(path.join(__dirname, 'build')));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../user-app/build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// Route all other requests to the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../user-app/build', 'index.html'));
 });
 //port
 const port = process.env.PORT;
