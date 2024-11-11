@@ -1,0 +1,227 @@
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 4 columns layout for desktop */
+    gap: 40px 0px;
+    /* Space between cards */
+    justify-items: center;
+    /* Center the cards within the grid */
+    margin: 20px 0;
+}
+
+.category-card {
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category-card:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.category-search-input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Pagination */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* new */
+    padding-bottom: 15px;
+}
+
+.pagination-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.dark-mode .category-card {
+    color: #fff;
+    background-color: #322b2b;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px rgba(237, 239, 240, 0.1);
+}
+
+.dark-mode .category-card:hover {
+    box-shadow: 4px 4px 15px rgba(237, 239, 240, 0.2);
+}
+
+.dark-mode .category-search-input {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+.dark-mode .pagination-button {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode .pagination-button:disabled {
+
+    color: #fff;
+    /* White text in pagination buttons */
+
+    background-color: #777;
+}
+
+.dark-mode .page-info {
+    color: #f2f2f2;
+}
+
+.dark-mode .category-card {
+    color: #fff;
+    /* White text color in dark mode */
+    background-color: #322b2b;
+    /* Darker background for the card */
+    border: 1px solid #444;
+    /* Border color for dark mode */
+    box-shadow: 2px 2px 10px rgba(237, 239, 240, 0.1);
+}
+
+.dark-mode .category-card p {
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    /* Adjust size as needed */
+    margin-bottom: 20px;
+    /* Space below the title */
+    color: #333;
+}
+
+.category-search-input {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.dark-mode h2 {
+    color: #f1f1f1;
+}
+
+.dark-mode .category-search-input {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 1300px) {
+    .category-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-card {
+        max-width: 240px;
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-card {
+        max-width: 220px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width:550px) {
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-card {
+        max-width: 140px;
+        max-height: 130px;
+    }
+}
+
+@media (max-width: 450px) {
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-card {
+        max-width: 170px;
+        max-height: 150px;
+    }
+}
+
+
+/* category page back button */
+.bcp {
+    position: absolute;
+    max-width: 170px;
+    top: 10px;
+    left: 0;
+    max-width: 170px;
+    padding: 10px 5px 10px 10px;
+    margin: 0px 0px 0px 10px;
+    background-color: #dad0d0;
+}
+
+.bcp:hover {
+    background-color: #999898;
+}
+
+@media (max-width: 550px) {
+    .bcp {
+       display: none;
+    }
+
+}
+
+
+.c1e {
+
+    padding-top: 20px;
+    font-family: Georgia, serif;
+
+}

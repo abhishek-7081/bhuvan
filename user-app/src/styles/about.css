@@ -1,0 +1,135 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+} */
+
+/* Header */
+.hd {
+  background: #8eb7ff;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+body.dark-mode .hd {
+  background: #333;
+}
+
+/* Container */
+.container {
+  width: 85%;
+  margin: 20px auto;
+}
+
+/* Team Section */
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Team Member Card */
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  flex: 1 1 30%;
+  min-width: 280px;
+  max-width: 33%;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.role {
+  color: #777;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.skills {
+  margin: 20px 0;
+}
+
+.skills span {
+  display: inline-block;
+  background: #8eb7ff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.team-member:hover {
+  background-color: #8eb7ff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .team-member {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .team-member h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .skills span {
+  background: #333;
+}
+
+/* Footer */
+.ft {
+  text-align: center;
+  padding: 15px 0;
+  background: #8eb7ff;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .ft {
+  background: #000;
+}
+
+/* Responsive Design for Team Member Cards */
+@media (max-width: 900px) {
+  .team-member {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-member {
+    max-width: 100%;
+  }
+}

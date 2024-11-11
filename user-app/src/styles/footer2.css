@@ -1,0 +1,61 @@
+:root {
+  --footer-bg-light: #8eb7ff; /* Blue for light mode */
+  --footer-bg-dark: #333333;     /* Black for dark mode */
+  --footer-text-color: #fff;  /* White text color */
+}
+
+body {
+  /* Assuming you have a class or way to toggle dark mode */
+  background-color: var(--body-bg-light); /* Light mode background */
+}
+
+body.dark-mode {
+  background-color: var(--body-bg-dark); /* Dark mode background */
+}
+
+.footer {
+  background-color: var(--footer-bg-light);
+  color: var(--footer-text-color);
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+body.dark-mode .footer {
+  background-color: var(--footer-bg-dark); /* Change background for dark mode */
+}
+
+/* Social icons and links styling */
+.social-icons a {
+  margin: 0 10px;
+  color: var(--footer-text-color);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #f4f4f4; /* Light color on hover */
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  color: var(--footer-text-color);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #f4f4f4; /* Light color on hover */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb; /* Text color for bottom section */
+}

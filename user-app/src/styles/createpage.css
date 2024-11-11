@@ -1,0 +1,297 @@
+/* Form.css */
+.card-form {
+  width: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Add margin-bottom to Home or any section above the button */
+.home-section {
+  margin-bottom: 20px; /* Add spacing between Home and Submit */
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+/* Make Submit Button Bigger */
+.submit-btn {
+  width: 100%;
+  padding: 15px; /* Increase padding for larger button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px; /* Make button font size larger */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add margin above the submit button */
+  margin-bottom: 2px; /* Add bottom margin to the submit button */
+}
+
+/* Hover effect for button */
+.submit-btn:hover {
+  background-color: #1f77d6;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .card-form {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .form-group label {
+  color: #f1f1f1;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #444;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: #66b2ff;
+}
+
+body.dark-mode .submit-btn {
+  background-color: #0056b3;
+}
+
+body.dark-mode .submit-btn:hover {
+  background-color: #003d80;
+}
+
+/* .notification */
+.notification {
+  background-color: #3e8e41;
+  border-radius: 5px;
+  color: #f1f1f1;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 50%;
+  right: -100%; /* Initially off-screen to the right */
+  transform: translateY(-50%);
+  transition: right 1s ease-in-out; /* Smooth transition for right position */
+  z-index: 1000; /* Ensures it's on top of other content */
+}
+
+body.dark-mode .notification {
+  background-color: #3e8e41;
+  color: #f1f1f1;
+}
+
+.notification.show {
+  right: 0; /* Bring it into view */
+}
+
+
+
+/* Add these styles to your createpage.css file */
+/* Light Mode (Default) */
+.login-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+ }
+ 
+ .login-popup {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+ }
+ 
+ .login-popup h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+ }
+ 
+ .login-popup .form-group {
+  margin-bottom: 1rem;
+ }
+ 
+ .login-popup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+ }
+ 
+ .login-popup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+ }
+ 
+ .login-popup input:focus {
+  border-color: #007bff;
+  outline: none;
+ }
+ 
+ .login-popup .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+ }
+ 
+ .login-popup button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+ }
+ 
+ .login-popup button:hover {
+  opacity: 0.9;
+ }
+ 
+ .login-popup button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+ }
+ 
+ .login-popup button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+ }
+ 
+ .login-popup .error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  text-align: center;
+ }
+ 
+ /* Dark Mode */
+ [data-theme='dark'] .login-popup-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+ }
+ 
+ [data-theme='dark'] .login-popup {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+ }
+ 
+ [data-theme='dark'] .login-popup h2 {
+  color: #ffffff;
+ }
+ 
+ [data-theme='dark'] .login-popup label {
+  color: #ffffff;
+ }
+ 
+ [data-theme='dark'] .login-popup input {
+  background-color: #333;
+  border-color: #444;
+  color: #ffffff;
+ }
+ 
+ [data-theme='dark'] .login-popup input:focus {
+  border-color: #0056b3;
+ }
+ 
+ [data-theme='dark'] .login-popup button[type="submit"] {
+  background-color: #0056b3;
+ }
+ 
+ [data-theme='dark'] .login-popup button[type="button"] {
+  background-color: #495057;
+ }
+ 
+ [data-theme='dark'] .login-popup .error {
+  color: #ff6b6b;
+ }
+
+
+
+
+
+
+
+
+
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures equal column widths */
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+table, th, td {
+  
+  border-radius: 10px;
+}
+
+th, td {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center; /* Center-aligns text in all cells */
+}
+th {
+  border-radius: 0px;
+  background-color: #f4c0c0;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Scrollable horizontally */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+  
+  th, td {
+    padding: 10px 5px; /* Adjust padding for small screens */
+  }
+}
+
