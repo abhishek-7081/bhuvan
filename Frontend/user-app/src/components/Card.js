@@ -22,7 +22,8 @@ const Cardlu = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch('/api/cards');
+        const response = await fetch('https://abhi-backend-s1xa.onrender.com/api/cards');
+        // const response = await fetch('/api/cards');
         if (response.ok) {
           const data = await response.json();
           const reversedData = data.reverse(); 
