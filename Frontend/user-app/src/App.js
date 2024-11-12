@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/home.js';
-import Cardlu from './components/Card.js';
-import Category from './pages/category.js';
-import Bigcard from './components/bigcard.js';
-import Create from './components/create.js';
-import Createpage from './pages/createpage.js';
+import Home from './pages/home';
+import Cardlu from './components/Card';
+import Category from './pages/category';
+import Bigcard from './components/bigcard';
+import Create from './components/create';
+import Createpage from './pages/createpage';
 import CategoryPage from './components/categoerypage.js';
-import CategoryList from './components/categorylsit.js';
+import CategoryList from './components/categorylsit';
 import Aboutpage from './pages/aboutpage.js';
 
 

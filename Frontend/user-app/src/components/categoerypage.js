@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Bigcard from './bigcard.js'; 
+import Bigcard from '../components/bigcard.js'; 
 import "../styles/category.css"; 
 
 const CategoryPage = () => {
